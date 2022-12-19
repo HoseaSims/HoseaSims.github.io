@@ -33,6 +33,9 @@ header a{
     text-decoration: none;
     margin-right: 12px;
 }
+.link-div a:hover{
+    text-shadow: 0 0 5px #257A9F;
+}
 .link-div{
     margin-bottom: 16px;
     margin-left: 10%;
@@ -54,19 +57,26 @@ header a{
     display: flex;
     background-color: #0F1922;
     padding-right: 44px;
-    /* max-height: 480px; */
     text-overflow: ellipsis;
     overflow: hidden;
-    /* width: 90%; */
+    transition: linear 400ms;
 }
+.fade{
+    opacity: 0;
+}
+
+@keyframes fade-out{
+        0% {opacity: 1;}
+        50% {opacity: .5;}
+        100% {opacity: 1;}
+    }
+
 .carosel-button{
     height: 104px;
     width: 46px;
-    /* background: none; */
     border: none;
     color: white;
     font-size: 32px;
-    
 }
 
 #back-button{
@@ -76,20 +86,20 @@ header a{
     top: 55%;
     left: 7.5%;
 }
-#back-button :hover{
+#back-button:hover{
     background: rgb(21,32,52);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(27,40,56,0) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(27,40,56,0) 70%);
 }
 #forward-button{
     background: rgb(21,32,52);
     background: linear-gradient(280deg, rgba(21,32,52,1) 0%, rgba(27,40,56,0) 100%);
     position: absolute;
     top: 55%;
-    right: 8%;
+    right: 7.5%;
 }
-#forward-button :hover{
+#forward-button:hover{
     background: rgb(21,32,52);
-    background: linear-gradient(280deg, rgba(255,255,255,1) 0%, rgba(27,40,56,0) 100%);
+    background: linear-gradient(270deg, rgba(255,255,255,.9) 0%, rgba(27,40,56,0) 70%);
 }
 
 .image{
